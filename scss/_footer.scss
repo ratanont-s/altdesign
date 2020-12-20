@@ -1,0 +1,40 @@
+footer {
+    padding: 16px 0;
+    font-size: 14px;
+    position: relative;
+
+    .footer {
+        &-logo {
+            height: 63px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        &-btn {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background-color: $white;
+            border-color: $secondary;
+            color: $secondary;
+            font-size: 12px;
+            text-transform: uppercase;
+
+            &:hover {
+                background-color: $secondary;
+                color: $white;
+                border-color: $white;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        .footer {
+            &-btn {
+                bottom: auto;
+                top: 0;
+                right: 19px;
+            }
+        }
+    }
+}

@@ -1,0 +1,164 @@
+section {
+    .sec {
+        &-heading {
+            margin-bottom: 37px;
+            font-size: 30px;
+            color: $black;
+
+            small {
+                display: block;
+                font-size: 16px;
+                margin-top: 11px;
+                color: $body-color;
+            }
+        }
+
+        &-title {
+            padding: 47px 15px;
+            color: $black;
+            font-size: 20px;
+            margin-bottom: 39px;
+        }
+
+        &-row-item {
+            margin-bottom: 50px;
+        }
+
+        &-btn {
+            width: 100%;
+            max-width: 389px;
+            font-size: 20px;
+            padding-top: 16px;
+            padding-bottom: 15px;
+        }
+    }
+
+    >.alt-container {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        border-width: 0 1px 1px 1px;
+        border-style: solid;
+        border-color: $border-color;
+    }
+}
+
+#banner {
+    >.alt-container {
+        padding: 34px 42px 18px;
+    }
+
+    .banner {
+        &-text {
+            background-color: $white;
+            display: inline;
+            @include font-size(44);
+            line-height: 1.5;
+            box-shadow: $box-shadow;
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        >.alt-container {
+            padding: 70px 32px 60px;
+        }
+    }
+}
+
+#message {
+    .message {
+        &-text {
+            font-size: 15px;
+        }
+    }
+}
+
+#clients {
+    .clients {
+        &-logo {
+            margin-bottom: 35px;
+        }
+
+        &-text {
+            font-size: 15px;
+        }
+    }
+}
+
+#services {
+    .services {
+        &-text {
+            color: $black;
+            margin-bottom: 44px;
+        }
+
+        &-title {
+            font-size: 18px;
+            color: $black;
+            margin-bottom: 28px;
+        }
+
+        &-list {
+            line-height: 30px;
+            font-size: 15px;
+        }
+
+        &-note {
+            font-size: 14px;
+        }
+
+        &-inner {
+            padding: 0 26px;
+        }
+
+        &-des {
+            font-size: 15px;
+        }
+    }
+}
+
+#company {
+    .company {
+        &-title {
+            font-size: 15px;
+            color: $black;
+        }
+
+        &-text {
+            font-size: 15px;
+            margin-bottom: 28px;
+
+            a {
+                color: $body-color;
+
+                &:hover {
+                    border-bottom: 3px solid $primary;
+                }
+            }
+        }
+    }
+}
+
+#contact {
+    .contact {
+        &-text {
+            color: $black;
+            font-weight: 500;
+            margin-bottom: 32px;
+        }
+
+        &-note {
+            color: $black;
+            font-size: 15px;
+            margin-bottom: 41px;
+        }
+    }
+
+    .form-group {
+        margin-bottom: 36px;
+
+        label {
+            font-size: 15px;
+            color: $black;
+        }
+    }
+}

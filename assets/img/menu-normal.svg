@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="38" height="34" viewBox="0 0 38 34">
+  <g id="menu-normal" transform="translate(-350 -33)">
+    <g id="menu" transform="translate(-538 33)">
+      <rect id="active" width="38" height="6" transform="translate(888)"/>
+    </g>
+    <g id="menu-2" data-name="menu" transform="translate(-538 47)">
+      <rect id="active-2" data-name="active" width="38" height="6" transform="translate(888)"/>
+    </g>
+    <g id="menu-3" data-name="menu" transform="translate(-538 61)">
+      <rect id="active-3" data-name="active" width="38" height="6" transform="translate(888)"/>
+    </g>
+  </g>
+</svg>

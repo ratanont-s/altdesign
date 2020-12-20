@@ -1,0 +1,13 @@
+@import url("https://use.typekit.net/fgt8jqs.css");
+@import './variables';
+@import './bootstrap/bootstrap.scss';
+@import './header';
+@import './footer';
+@import './modal';
+@import './form';
+@import './landing';
+
+.alt-container {
+    @include make-container();
+    max-width: 1389px;
+}
