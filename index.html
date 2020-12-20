@@ -9,6 +9,36 @@
     <meta property="og:image" content="./assets/img/og-image.png" />
     <title>altdesign</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <script>
+        (function (d) {
+            var config = {
+                    kitId: 'mcu8dbm',
+                    scriptTimeout: 3000,
+                    async: true
+                },
+                h = d.documentElement,
+                t = setTimeout(function () {
+                    h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+                }, config.scriptTimeout),
+                tk = d.createElement("script"),
+                f = false,
+                s = d.getElementsByTagName("script")[0],
+                a;
+            h.className += " wf-loading";
+            tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+            tk.async = true;
+            tk.onload = tk.onreadystatechange = function () {
+                a = this.readyState;
+                if (f || a && a != "complete" && a != "loaded") return;
+                f = true;
+                clearTimeout(t);
+                try {
+                    Typekit.load(config)
+                } catch (e) {}
+            };
+            s.parentNode.insertBefore(tk, s)
+        })(document);
+    </script>
     <!-- CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
         integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
@@ -17,7 +47,7 @@
 </head>
 
 <body>
-    <header class="sticky-top bg-white shadow">
+    <header class="sticky-top bg-white">
         <nav class="navbar navbar-expand-lg">
             <div class="alt-container">
                 <a class="navbar-brand" href="#">
@@ -65,7 +95,7 @@
                             よみやすく<br>
                             わかりやすく<br>
                             効果のある<br>
-                            webサイトを<br>
+                            <span>web</span>サイトを<br>
                             身近に。
                         </h1>
                     </div>
@@ -145,42 +175,47 @@
                     ユーザビリティを考慮したページレイアウトからテクニカルなSEO施策まで、<br>
                     お客様の目的に合わせたWEBサイト制作を行っています。
                 </p>
-                <div class="sec-row-item row">
-                    <div class="col-lg-4">
-                        <div class="sec-title bg-primary text-uppercase text-center">Service Details</div>
-                        <div class="services-inner">
-                            <h5 class="services-title">業務内容</h5>
-                            <ul class="services-list list-unstyled">
-                                <li>WEBサイト制作</li>
-                                <li>広告バナー</li>
-                                <li>製品訴求ライティング</li>
-                                <li>SEO施策</li>
-                                <li>SNS運用代行</li>
-                                <li>ホワイトペーパー</li>
-                                <li>ECカート設置/運用代行</li>
-                            </ul>
+                <div class="services-inner">
+                    <div class="sec-row-item row">
+                        <div class="col-lg-4">
+                            <div class="sec-title bg-primary text-uppercase text-center">Service Details</div>
+                            <div class="services-detail">
+                                <h5 class="services-title">業務内容</h5>
+                                <ul class="services-list list-unstyled">
+                                    <li>WEBサイト制作</li>
+                                    <li>広告バナー</li>
+                                    <li>製品訴求ライティング</li>
+                                    <li>SEO施策</li>
+                                    <li>SNS運用代行</li>
+                                    <li>ホワイトペーパー</li>
+                                    <li>ECカート設置/運用代行</li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-lg-8">
-                        <img src="./assets/img/services-img.jpg" alt="" class="w-100">
-                        <p class="services-note text-center text-lg-right mb-0">制作事例：伊藤ミカン園様、株式会社UsideU様、株式会社Schoo様</p>
-                    </div>
-                </div>
-                <div class="sec-row-item row mb-0">
-                    <div class="col-lg-4">
-                        <div class="sec-title bg-primary text-uppercase text-center">previous works</div>
-                    </div>
-                    <div class="col-lg-8">
-                        <div class="services-inner">
-                            <h5 class="services-title">過去のサイト制作実績</h5>
-                            <p class="services-des">
-                                飲料メーカー、大手スーパー、医薬品、サプリメント、化粧品、ヘアサロン、フィットネスジム、<br>
-                                建築施工、農園、人材派遣・転職、ナレーション、ダイレクトセリング、タクシー、営業支援、<br>
-                                リファレンスチェック、広告代理店、マッサージ器具、イベント告知、ホテルオペレーション　など
+                        <div class="col-lg-8">
+                            <div class="services-img">
+                                <img src="./assets/img/services-img.jpg" alt="" class="w-100">
+                            </div>
+                            <p class="services-note text-center text-lg-right mb-0">制作事例：伊藤ミカン園様、株式会社UsideU様、株式会社Schoo様
                             </p>
-                            <p class="services-des">詳しくはお問い合わせください。</p>
                         </div>
-                        <a href="#contact" class="sec-btn btn btn-secondary">お問い合わせはこちら</a>
+                    </div>
+                    <div class="sec-row-item row mb-0">
+                        <div class="col-lg-4">
+                            <div class="sec-title bg-primary text-uppercase text-center">previous works</div>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="services-detail">
+                                <h5 class="services-title">過去のサイト制作実績</h5>
+                                <p class="services-des">
+                                    飲料メーカー、大手スーパー、医薬品、サプリメント、化粧品、ヘアサロン、フィットネスジム、<br>
+                                    建築施工、農園、人材派遣・転職、ナレーション、ダイレクトセリング、タクシー、営業支援、<br>
+                                    リファレンスチェック、広告代理店、マッサージ器具、イベント告知、ホテルオペレーション　など
+                                </p>
+                                <p class="services-des">詳しくはお問い合わせください。</p>
+                            </div>
+                            <a href="#contact" class="sec-btn btn btn-secondary">お問い合わせはこちら</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -188,52 +223,54 @@
         <section id="company" class="company">
             <div class="alt-container">
                 <h2 class="sec-heading text-center">Company<small>会社概要</small></h2>
-                <div class="sec-row-item row">
-                    <div class="col-lg-4">
-                        <h3 class="sec-title bg-primary text-uppercase text-center">Company Details</h3>
+                <div class="company-inner">
+                    <div class="sec-row-item row">
+                        <div class="col-lg-4">
+                            <h3 class="sec-title bg-primary text-uppercase text-center">Company Details</h3>
+                        </div>
+                        <div class="col-lg-8">
+                            <h5 class="company-title">会社名</h5>
+                            <p class="company-text">Alt Design Oﬃce</p>
+
+                            <h5 class="company-title">所在地</h5>
+                            <p class="company-text">
+                                Room 312, 3rd Floor, Golden Town Building, 71 Phayathai Rd, Ratchathewi, Bangkok, 10400
+                                Thailand.
+                            </p>
+
+                            <h5 class="company-title">電話番号</h5>
+                            <ul class="company-text list-unstyled">
+                                <li>
+                                    <a href="tel:+6621074826">+66 (0) 2-107-4826</a>（タイ）
+                                </li>
+                                <li>
+                                    <a href="tel:+815055325003">+81 (0) 50-5532-5003</a>（日本）
+                                </li>
+                            </ul>
+
+                            <h5 class="company-title">連絡先</h5>
+                            <p class="company-text">
+                                <a href="mailto:contact@alt-design.tech">contact@alt-design.tech</a>
+                            </p>
+
+                            <h5 class="company-title">代表者</h5>
+                            <p class="company-text">
+                                信藤博之
+                                <a href="#biographyModal" data-toggle="modal">（略歴）</a>
+                            </p>
+                        </div>
                     </div>
-                    <div class="col-lg-8">
-                        <h5 class="company-title">会社名</h5>
-                        <p class="company-text">Alt Design Oﬃce</p>
-
-                        <h5 class="company-title">所在地</h5>
-                        <p class="company-text">
-                            Room 312, 3rd Floor, Golden Town Building, 71 Phayathai Rd, Ratchathewi, Bangkok, 10400
-                            Thailand.
-                        </p>
-
-                        <h5 class="company-title">電話番号</h5>
-                        <ul class="company-text list-unstyled">
-                            <li>
-                                <a href="tel:+6621074826">+66 (0) 2-107-4826</a>（タイ）
-                            </li>
-                            <li>
-                                <a href="tel:+815055325003">+81 (0) 50-5532-5003</a>（日本）
-                            </li>
-                        </ul>
-
-                        <h5 class="company-title">連絡先</h5>
-                        <p class="company-text">
-                            <a href="mailto:contact@alt-design.tech">contact@alt-design.tech</a>
-                        </p>
-
-                        <h5 class="company-title">代表者</h5>
-                        <p class="company-text">
-                            信藤博之
-                            <a href="#biographyModal" data-toggle="modal">（略歴）</a>
-                        </p>
-                    </div>
-                </div>
-                <div class="sec-row-item row">
-                    <div class="col-lg-4">
-                        <h3 class="sec-title bg-primary text-uppercase text-center">Access</h3>
-                    </div>
-                    <div class="col-lg-8">
-                        <div class="embed-responsive embed-responsive-16by9">
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7753.075320188008!2d100.61101158071234!3d13.68585402470377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e2a00283833867%3A0x6157b171cbb4c381!2s101%20True%20Digital%20Park!5e0!3m2!1sth!2sth!4v1608448211298!5m2!1sth!2sth"
-                                width="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
-                                tabindex="0"></iframe>
+                    <div class="sec-row-item row">
+                        <div class="col-lg-4">
+                            <h3 class="sec-title bg-primary text-uppercase text-center">Access</h3>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7753.075320188008!2d100.61101158071234!3d13.68585402470377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e2a00283833867%3A0x6157b171cbb4c381!2s101%20True%20Digital%20Park!5e0!3m2!1sth!2sth!4v1608448211298!5m2!1sth!2sth"
+                                    width="100%" frameborder="0" style="border:0;" allowfullscreen=""
+                                    aria-hidden="false" tabindex="0"></iframe>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -269,38 +306,42 @@
         </section>
         <section id="contact" class="contact">
             <div class="alt-container bg-light">
-                <h2 class="sec-heading text-center">Contact<small>お問い合わせ</small></h2>
-                <p class="contact-text">
-                    お仕事のご依頼、制作実績に関するお問い合わせや業務内容に関するご質問など、<br>
-                    お気軽にお問い合わせください。
-                </p>
-                <form action="">
-                    <h6 class="contact-note"><span class="text-danger mr-1">*</span>必須事項となります。</h6>
-                    <div class="form-group">
-                        <label for="">会社名</label>
-                        <input type="text" class="form-control" placeholder="Alt Design Oﬃce">
-                    </div>
-                    <div class="form-group">
-                        <label for="">氏名<span class="text-danger ml-1">*</span></label>
-                        <div class="form-row">
-                            <div class="col-6">
-                                <input type="text" class="form-control" placeholder="姓">
-                            </div>
-                            <div class="col-6">
-                                <input type="text" class="form-control" placeholder="名">
+                <div class="contact-inner">
+                    <h2 class="sec-heading text-center">Contact<small>お問い合わせ</small></h2>
+                    <p class="contact-text">
+                        お仕事のご依頼、制作実績に関するお問い合わせや業務内容に関するご質問など、<br>
+                        お気軽にお問い合わせください。
+                    </p>
+                    <form action="">
+                        <h6 class="contact-note"><span class="text-danger mr-1">*</span>必須事項となります。</h6>
+                        <div class="form-group">
+                            <label for="">会社名</label>
+                            <input type="text" class="form-control" placeholder="Alt Design Oﬃce">
+                        </div>
+                        <div class="form-group">
+                            <label for="">氏名<span class="text-danger ml-1">*</span></label>
+                            <div class="form-row">
+                                <div class="col-6">
+                                    <input type="text" class="form-control" placeholder="姓">
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" class="form-control" placeholder="名">
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="">メールアドレス<span class="text-danger ml-1">*</span></label>
-                        <input type="text" class="form-control" placeholder="contact@alt-design.tech">
-                    </div>
-                    <div class="form-group">
-                        <label for="">お問い合わせ内容<span class="text-danger ml-1">*</span></label>
-                        <textarea class="form-control" rows="5" placeholder="お問い合わせ内容をご記入ください"></textarea>
-                    </div>
-                    <button type="submit" class="sec-btn btn btn-secondary">Send</button>
-                </form>
+                        <div class="form-group">
+                            <label for="">メールアドレス<span class="text-danger ml-1">*</span></label>
+                            <input type="text" class="form-control" placeholder="contact@alt-design.tech">
+                        </div>
+                        <div class="form-group">
+                            <label for="">お問い合わせ内容<span class="text-danger ml-1">*</span></label>
+                            <textarea class="form-control" rows="5" placeholder="お問い合わせ内容をご記入ください"></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="sec-btn btn btn-secondary">Send</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </section>
     </main>

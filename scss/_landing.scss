@@ -4,12 +4,17 @@ section {
             margin-bottom: 37px;
             font-size: 30px;
             color: $black;
+            font-family: futura-pt;
+            font-weight: 600;
 
             small {
                 display: block;
                 font-size: 16px;
                 margin-top: 11px;
                 color: $body-color;
+                font-family: a-otf-midashi-go-mb31-pr6n, sans-serif;
+                font-weight: 600;
+                font-style: normal;
             }
         }
 
@@ -18,6 +23,19 @@ section {
             color: $black;
             font-size: 20px;
             margin-bottom: 39px;
+            font-family: futura-pt;
+            font-weight: 500;
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: -100%;
+                width: 100%;
+                height: 1px;
+                background-color: $border-color;
+            }
         }
 
         &-row-item {
@@ -39,6 +57,11 @@ section {
         border-width: 0 1px 1px 1px;
         border-style: solid;
         border-color: $border-color;
+
+        @include media-breakpoint-up(lg) {
+            padding-top: 95px;
+            padding-bottom: 95px;
+        }
     }
 }
 
@@ -51,9 +74,15 @@ section {
         &-text {
             background-color: $white;
             display: inline;
-            @include font-size(44);
-            line-height: 1.5;
+            font-size: 40px;
             box-shadow: $box-shadow;
+            color: $secondary;
+            font-family: 'ShinGoPro-Regular-AlphaNum';
+
+            span {
+                font-family: futura-pt;
+                font-weight: 500;
+            }
         }
     }
 
@@ -85,7 +114,16 @@ section {
 }
 
 #services {
+    >.alt-container {
+        overflow: hidden;
+    }
+
     .services {
+        &-inner {
+            max-width: 1160px;
+            margin: 0 auto;
+        }
+
         &-text {
             color: $black;
             margin-bottom: 44px;
@@ -106,7 +144,7 @@ section {
             font-size: 14px;
         }
 
-        &-inner {
+        &-detail {
             padding: 0 26px;
         }
 
@@ -114,10 +152,34 @@ section {
             font-size: 15px;
         }
     }
+
+    @include media-breakpoint-up(lg) {
+        .services {
+            &-img {
+                border: 1px solid $border-color;
+                padding: 24px 40px;
+                margin-bottom: 20px;
+            }
+
+            &-detail {
+                border-left: 1px solid $border-color;
+                margin-bottom: 54px;
+            }
+        }
+    }
 }
 
 #company {
+    >.alt-container {
+        overflow: hidden;
+    }
+
     .company {
+        &-inner {
+            max-width: 1160px;
+            margin: 0 auto;
+        }
+
         &-title {
             font-size: 15px;
             color: $black;
@@ -140,6 +202,11 @@ section {
 
 #contact {
     .contact {
+        &-inner {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
         &-text {
             color: $black;
             font-weight: 500;
@@ -160,5 +227,9 @@ section {
             font-size: 15px;
             color: $black;
         }
+    }
+
+    @include media-breakpoint-up(lg) {
+        margin-bottom: 95px;
     }
 }

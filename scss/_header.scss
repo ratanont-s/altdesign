@@ -1,4 +1,6 @@
 header {
+    border-bottom: 1px solid $border-color;
+
     .navbar {
         padding: 0;
 
@@ -54,14 +56,18 @@ header {
 
     @include media-breakpoint-up(lg) {
         .navbar {
+            >.alt-container {
+                border: 1px solid $border-color;
+                border-width: 0 1px;
+            }
+
             &-nav {
                 .nav {
                     &-item {
                         padding: 0 30px;
 
                         &-contact {
-                            border: 1px solid $border-color;
-                            border-width: 0 1px;
+                            border-left: 1px solid $border-color;
                         }
                     }
 
