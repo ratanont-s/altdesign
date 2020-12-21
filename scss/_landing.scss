@@ -36,6 +36,10 @@ section {
                 height: 1px;
                 background-color: $border-color;
             }
+            @include media-breakpoint-up(lg){
+                width: 260px;
+                margin-right: calc(97px - 15px);
+            }
         }
 
         &-row-item {
