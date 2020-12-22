@@ -196,12 +196,7 @@ section {
             font-size: 15px;
         }
     }
-    .btn-secondary{
-        &:hover{
-            background-color: lighten($secondary,50%);
-            border-color: lighten($secondary,50%);
-        }
-    }
+
 
     @include media-breakpoint-up(lg) {
         .services {
