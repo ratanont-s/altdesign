@@ -16,6 +16,10 @@ section {
                 font-weight: 600;
                 font-style: normal;
             }
+
+            @include media-breakpoint-up(lg) {
+                font-size: 40px;
+            }
         }
 
         &-title {
@@ -36,7 +40,8 @@ section {
                 height: 1px;
                 background-color: $border-color;
             }
-            @include media-breakpoint-up(lg){
+
+            @include media-breakpoint-up(lg) {
                 width: 260px;
                 margin-right: calc(97px - 15px);
             }
@@ -76,16 +81,25 @@ section {
 
     .banner {
         &-text {
-            background-color: $white;
-            display: inline;
+            display: inline-flex;
+            flex-direction: column;
+            align-items: flex-start;
             font-size: 40px;
-            box-shadow: $box-shadow;
             color: $secondary;
             font-family: 'ShinGoPro-Regular-AlphaNum';
 
             span {
-                font-family: futura-pt;
-                font-weight: 500;
+                display: inline-block;
+                box-shadow: $box-shadow;
+                padding: 2px 8px;
+                background-color: $white;
+                margin-bottom: 8px;
+
+                i {
+                    font-family: futura-pt;
+                    font-weight: 500;
+                    font-style: normal;
+                }
             }
         }
     }
@@ -94,6 +108,12 @@ section {
         >.alt-container {
             padding: 70px 32px 60px;
         }
+
+        .banner {
+            &-text {
+                font-size: 44px;
+            }
+        }
     }
 }
 
@@ -101,6 +121,16 @@ section {
     .message {
         &-text {
             font-size: 15px;
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        .message {
+            &-text {
+                font-size: 18px;
+                line-height: 32px;
+                font-weight: 500;
+            }
         }
     }
 }
@@ -113,6 +143,16 @@ section {
 
         &-text {
             font-size: 15px;
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        .clients {
+            &-text {
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 26px;
+            }
         }
     }
 }
@@ -159,6 +199,11 @@ section {
 
     @include media-breakpoint-up(lg) {
         .services {
+            &-text {
+                font-size: 18px;
+                font-weight: 500;
+            }
+
             &-img {
                 border: 1px solid $border-color;
                 padding: 24px 40px;
@@ -168,6 +213,21 @@ section {
             &-detail {
                 border-left: 1px solid $border-color;
                 margin-bottom: 54px;
+            }
+
+            &-list {
+                font-size: 18px;
+                line-height: 32px;
+            }
+
+            &-note {
+                font-size: 16px;
+                font-weight: 500;
+            }
+
+            &-des {
+                font-size: 16px;
+                line-height: 26px;
             }
         }
     }
@@ -199,6 +259,17 @@ section {
                 &:hover {
                     border-bottom: 3px solid $primary;
                 }
+            }
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        .company {
+
+            &-title,
+            &-text {
+                font-size: 18px;
+                line-height: 32px;
             }
         }
     }
@@ -235,5 +306,16 @@ section {
 
     @include media-breakpoint-up(lg) {
         margin-bottom: 95px;
+
+        .contact {
+            &-text {
+                font-size: 18px;
+                line-height: 32px;
+            }
+
+            &-note {
+                font-size: 16px;
+            }
+        }
     }
 }
