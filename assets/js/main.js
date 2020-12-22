@@ -1,6 +1,6 @@
 var scroll = new SmoothScroll('[data-scroll]',{
-    header: 'header'
-  });
+  header: '.navbar'
+});
 
 
 $(function () {

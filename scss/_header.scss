@@ -100,8 +100,19 @@ header {
             &-nav {
                 .nav {
                     &-link {
+                        position: relative;
                         &:not(.nav-link-contact) {
                             padding-left: 58px;
+                            &:focus::before{
+                                content: '';
+                                position: absolute;
+                                top: 50%;
+                                left: 0;
+                                transform: translateY(-50%);
+                                width: 50px;
+                                height: 4px;
+                                background-color: $secondary;
+                            }
                         }
 
                         &-contact {
