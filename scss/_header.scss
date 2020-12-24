@@ -77,7 +77,7 @@ header {
                     }
 
                     &-link {
-                        &.active:not(.nav-link-contact) {
+                        &:hover:not(.nav-link-contact),&.active:not(.nav-link-contact) {
                             &::before {
                                 content: '';
                                 position: absolute;
