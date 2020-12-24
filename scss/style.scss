@@ -15,10 +15,19 @@
 @import './modal';
 @import './form';
 @import './landing';
-body{
+
+body {
     position: relative;
 }
+
 .alt-container {
     @include make-container();
     max-width: 1398px;
+}
+
+.btn-secondary {
+    &:hover {
+        background-color: lighten($secondary, 50%);
+        border-color: lighten($secondary, 50%);
+    }
 }
